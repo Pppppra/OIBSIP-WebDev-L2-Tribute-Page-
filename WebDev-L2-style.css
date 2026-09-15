@@ -1,0 +1,267 @@
+/* General Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+    color: #222;
+    background-color: #f4f1ea;
+}
+
+
+/* Hero Section */
+
+.hero {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background: linear-gradient(
+        rgba(20, 35, 55, 0.85),
+        rgba(20, 35, 55, 0.85)
+    ),
+    url("https://images.unsplash.com/photo-1500534623283-312aade485b7")
+    center/cover no-repeat;
+
+    color: white;
+    padding: 40px 20px;
+}
+
+.hero-content h1 {
+    font-family: Georgia, serif;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    background-color: #f4a261;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #e76f51;
+    transform: scale(1.05);
+}
+
+
+/* Image Section */
+
+.image-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.image-section img {
+    width: 280px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.image-section p {
+    margin-top: 15px;
+    font-style: italic;
+    color: #555;
+}
+
+
+/* Biography */
+
+.biography {
+    padding: 70px 15%;
+    background-color: #e9ecef;
+}
+
+h2 {
+    font-family: Georgia, serif;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #17324d;
+}
+
+.biography p {
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+
+
+/* Timeline */
+
+.timeline {
+    padding: 70px 8%;
+    background-color: #fefae0;
+}
+
+.timeline-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.timeline-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 5px solid #f4a261;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.timeline-card:hover {
+    transform: translateY(-8px);
+}
+
+.timeline-card span {
+    display: inline-block;
+    background-color: #264653;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.timeline-card h3 {
+    font-family: Georgia, serif;
+    margin: 12px 0;
+    color: #264653;
+}
+
+
+/* Quote */
+
+.quote-section {
+    padding: 80px 15%;
+    text-align: center;
+    background-color: #264653;
+    color: white;
+}
+
+blockquote {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.quote-section p {
+    font-size: 18px;
+}
+
+
+/* Inspiration */
+
+.inspiration {
+    padding: 70px 15%;
+    text-align: center;
+    background-color: #fff;
+}
+
+.inspiration p {
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+#message {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #264653;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #17202a;
+    color: white;
+}
+
+footer p {
+    margin: 5px;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 900px) {
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .timeline-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .biography,
+    .quote-section,
+    .inspiration {
+        padding: 60px 8%;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: 70vh;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    .image-section img {
+        width: 230px;
+        height: 290px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .timeline-container {
+        grid-template-columns: 1fr;
+    }
+
+    blockquote {
+        font-size: 22px;
+    }
+
+    .biography,
+    .quote-section,
+    .inspiration {
+        padding: 50px 6%;
+    }
+}
